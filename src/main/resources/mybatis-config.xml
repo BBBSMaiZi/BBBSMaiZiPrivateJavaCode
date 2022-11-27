@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+
+    <!--    起别名-->
+    <typeAliases>
+<!--扫包起别名 默认是类的小写字母 User——> user-->
+        <package name="com.demo2.bean"/>
+    </typeAliases>
+
+    <!--分页插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <!--方言 mysql是limit分页-->
+            <property name="dialect" value="mysql"/>
+        </plugin>
+    </plugins>
+
+
+
+    <!--写mapper 的映射文件-->
+    <mappers>
+        <!--mapper文件扫包 （需要接口和xml文件在一起）-->
+        <package name="com.demo2.mapper"/>
+    </mappers>
+</configuration>

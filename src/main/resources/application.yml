@@ -1,0 +1,12 @@
+server:
+  port: 9999
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db1?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+logging:
+  level:
+    com.demo2.root: info
+    com.demo2.mapper: debug
