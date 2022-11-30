@@ -45,11 +45,10 @@ public class QueryEmpController extends BasicController {
     }
 
     @PostMapping("/addEmp")
-    public Result addEmp(String empno, String ename) {
+    public Result addEmp(@RequestBody Emp emp) {
 
-        System.out.println("empno = " + empno);
-        System.out.println("ename = " + ename);
 
+        System.out.println("emp = " + emp);
 
         return new Result(true, "新增员工成功");
     }
